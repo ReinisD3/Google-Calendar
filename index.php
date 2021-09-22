@@ -16,11 +16,13 @@
     <label for="from">Address:</label><br>
     <input type="text" id="address" name="address"><br><br><br>
     <input type="checkbox" id="linkGoogle" name="linkGoogle" value="google">
-    <label for="vehicle1"> Google Link</label>
+    <label for="linkGoogle"> Google Link</label>
     <input type="checkbox" id="linkYahoo" name="linkYahoo" value="yahoo">
-    <label for="vehicle2"> Yahoo Link</label>
+    <label for="linkYahoo"> Yahoo Link</label>
     <input type="checkbox" id="linkOutlook" name="linkOutlook" value="webOutlook">
-    <label for="vehicle3"> WebOutlook</label><br><br>
+    <label for="linkOutlook"> WebOutlook</label>
+    <input type="checkbox" id="ics" name="ics" value="ics">
+    <label for="ics"> ICS</label><br><br>
 
     <input type="submit"  name="submit" value="Generate">
 </form>
@@ -43,6 +45,7 @@ if (isset($_POST['title']) && isset($_POST['from']) && isset($_POST['to']))
     if(isset($_POST['linkGoogle'])) $linkType[]=$_POST['linkGoogle'];
     if(isset($_POST['linkYahoo'])) $linkType[]=$_POST['linkYahoo'];
     if(isset($_POST['linkOutlook'])) $linkType[]=$_POST['linkOutlook'];
+    if(isset($_POST['ics'])) $linkType[]=$_POST['ics'];
 
     foreach ($linkType as $type)
     {
